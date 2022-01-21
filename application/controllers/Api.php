@@ -21,6 +21,10 @@ class Api extends CI_Controller {
 	public function index()
 	{
 	//	$this->load->view('welcome_message');
-	echo("<h1>Rest Api</h1>");
+	//echo("<h1>Rest Api</h1>");
+	$query=$this->db->query("select *from user");
+	//print_r($query->result());
+	echo json_encode($query->result());	
+	
 	}
 }
